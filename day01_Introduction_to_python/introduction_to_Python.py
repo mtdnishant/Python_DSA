@@ -1,4 +1,4 @@
-######## singly list #############
+
 class Node:
     def __init__(self,item=None, next=None):
         self.item = item
@@ -15,7 +15,7 @@ class SLL:
         #create a new node and link its to the old start 
         n= Node(data,self.start)
         self.start = n   
-        
+        0
     def insert_at_last(self,data):
         n= Node(data)
         if not self.is_empty():
