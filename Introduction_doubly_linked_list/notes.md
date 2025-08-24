@@ -1,29 +1,21 @@
-# Doubly Linked List
+# Doubly Linked List in Python
 
-## 1. Definition
-A **doubly linked list** is a linear data structure where each node contains:
-- A `data` field,
-- A `prev` pointer/reference to the previous node,
-- A `next` pointer/reference to the next node :contentReference[oaicite:2]{index=2}.
+A **doubly linked list (DLL)** is a data structure where each node contains:
+- A **data field**
+- A **pointer to the next node** (`next`)
+- A **pointer to the previous node** (`prev`)
 
-The `prev` of the first node and the `next` of the last node typically point to `null` (or a sentinel) :contentReference[oaicite:3]{index=3}.
+This structure allows efficient two-way traversal.  
+:contentReference[oaicite:0]{index=0}
 
-## 2. Advantages
-- Can traverse **both forwards and backwards** easily :contentReference[oaicite:4]{index=4}.
-- **Efficient insertion and deletion**, especially if the node to be manipulated is known—no need to traverse the list to find the previous node :contentReference[oaicite:5]{index=5}.
+---
 
-## 3. Disadvantages
-- **More memory overhead**: each node needs an extra pointer (prev) :contentReference[oaicite:6]{index=6}.
-- **Pointer operations are more complex**: insertion/deletion involves updating multiple pointers carefully :contentReference[oaicite:7]{index=7}.
+## 1. Node Structure
 
-## 4. Node Structure Examples
+```python
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.prev = None
+        self.next = None
 
-### In C++
-```cpp
-struct Node {
-    int data;
-    Node* prev;
-    Node* next;
-
-    Node(int d) : data(d), prev(nullptr), next(nullptr) {}
-};
